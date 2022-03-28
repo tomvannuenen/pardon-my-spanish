@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request
-from spanishdict import answers
 from random import choice
 
 app = Flask(__name__)
