@@ -1,2 +1,2 @@
 # Pardon my Spanish
-A simple web app to learn Spanish
+A simple language learning app for demonstration purposes, made with Flask 
