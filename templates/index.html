@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pardon my Spanish</title>        
+        <script 
+                src="https://code.jquery.com/jquery-1.12.4.min.js" 
+                integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    </head>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        font-family: "Raleway";
+    }
+    div {
+        text-align: center;
+        margin-top: 50px;
+    }
+    h1 {
+        color: red;
+        font-size: 40pt;
+    }
+    p {
+        font-size: 24pt;
+    }
+</style>
+
+<div id="question">
+    <h1>Pardon my Spanish</h1>
+     <h2>{{ q }}</h2>
+
+    <form method="POST">
+        <input id="user_input" name="text">
+        <input id="user_submit" type="submit">
+    </form>
+    
+    <script>
+        $(document).ready(function(){
+            var check_answer = 0;
+            $("#user_submit").on("click", function(){
+                // ADD: if answer = correct / fase
+                
+                $("<input/>").attr({ type: "text", placeholder: "TESTING THIS",
+                    name: "I am trying"+check_answer});//.appendTo("#question").wrap($("<div/>"));
+            });
+        })
+    </script>
+        
+</div>
