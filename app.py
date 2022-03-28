@@ -16,31 +16,44 @@ with open('spanishdict.txt', 'r') as f:
                 spa1,spa2 = spa.split('/')
                 l = [eng,spa1,spa2] 
             else:
-                spa1, spa2 = spa, "NA"
+                spa1, spa2 = spa, 'n/a'
                 l = [eng,spa1,spa2] 
             spanish_list.append(l)       
         except:
             continue
 
-@app.route('/')
-def index():    
-    load_q = choice(spanish_list)
-    eng = load_q[0]
-    spa_a = [s.lower() for s in load_q[1:]]
-    q = f"Translate: {eng}".lower()
-    return render_template('index.html', q=q)
+loaded_q = []
+answers = []
+with open('user_score.txt', 'w') as f:
+    f.write(str(0))
 
 @app.route('/', methods=['GET', 'POST'])
-def my_form_post():
-    user_a = request.form['text'].upper()        
-    if request.method == "POST":
-        if user_a in spa_a:
-            return text
-        else:
-            return f"WRONG, right answer is {spa_a}"
+def basic():
+    with open('user_score.txt', 'r') as f:
+        score = int(f.read())
+    response = ""
+    loaded_q.append(choice(spanish_list))
+    eng = loaded_q[len(loaded_q)-1][0]
+    spa_a = [a.lower().strip(" ") for a in loaded_q[len(loaded_q)-2][1:]]
+    if "n/a" in spa_a:
+        spa_a = loaded_q[len(loaded_q)-2][1].lower()
+    q = f"Translate: {eng}"    
+    if request.method == 'POST':
+        if request.form['text']:
+            answers.append(request.form['text'])
+            if request.form['text'].lower() in spa_a:
+                response = "Good!"
+                with open('user_score.txt', 'r') as f:
+                    score = int(f.read())
+                score += 1
+                with open('user_score.txt', 'w') as f:
+                    f.write(str(score))
+            else:
+                response = f"Sorry, right answer was: {spa_a}"
+    return render_template('index.html', q=q, response=response,loaded_q=loaded_q, spa_a=spa_a,score=score)
 
-
+app.run(debug=True)
 
 if __name__ == "__main__":
     app.debug = True
-    app.run()
+    app.run(host='0.0.0.0')

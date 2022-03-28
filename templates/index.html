@@ -31,6 +31,30 @@
     }
 </style>
 
+    
+<body>
+<div id="question">
+<h1>Pardon my Spanish</h1>
+<h2>{{ q }}</h2>
+
+<form action="/" method="POST">
+    
+<input id="user_input" name="text">
+<input id="user_submit" type="submit">
+
+</form>
+
+<p>{{response}}</p>
+<p>Your score: {{score}}</p>
+    
+    
+<!---{% for a in answers %}
+    {{answers.name}}: {{answers.answers}}<br>
+{% endfor %}--->
+    
+    
+</div>
+<!---    
 <div id="question">
     <h1>Pardon my Spanish</h1>
      <h2>{{ q }}</h2>
@@ -38,18 +62,8 @@
     <form method="POST">
         <input id="user_input" name="text">
         <input id="user_submit" type="submit">
-    </form>
-    
-    <script>
-        $(document).ready(function(){
-            var check_answer = 0;
-            $("#user_submit").on("click", function(){
-                // ADD: if answer = correct / fase
-                
-                $("<input/>").attr({ type: "text", placeholder: "TESTING THIS",
-                    name: "I am trying"+check_answer});//.appendTo("#question").wrap($("<div/>"));
-            });
-        })
-    </script>
-        
+    </form>    
 </div>
+--->
+    
+</body>    
