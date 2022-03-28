@@ -34,6 +34,9 @@ def basic():
     spa_a = [a.lower().strip(" ") for a in loaded_q[len(loaded_q)-2][1:]]
     if "n/a" in spa_a:
         spa_a = loaded_q[len(loaded_q)-2][1].lower()
+    else:
+        spa_a_1 = loaded_q[len(loaded_q)-2][1].lower()
+        spa_a_2 = loaded_q[len(loaded_q)-2][2].lower()
     q = f"Translate: {eng}"    
     if request.method == 'POST':
         if request.form['text']:
@@ -46,8 +49,11 @@ def basic():
                 with open('user_score.txt', 'w') as f:
                     f.write(str(score))
             else:
-                response = f"Sorry, right answer was: {spa_a}"
-    return render_template('index.html', q=q, response=response,loaded_q=loaded_q, spa_a=spa_a,score=score)
+                try:
+                    response = f"Sorry, right answer was: {spa_a_1} / {spa_a_2}"
+                except:
+                    response = f"Sorry, right answer was: {spa_a}"
+    return render_template('index.html', q=q, response=response,loaded_q=loaded_q,score=score)
 
 app.run(debug=True)
 
