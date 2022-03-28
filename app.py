@@ -10,8 +10,6 @@ with open('spanishdict.txt', 'r') as f:
         try:
             line = line.strip('\n')
             spa,eng = line.split('-')
-            # remove spaces at beginning/ending of word
-            ####
             if '/' in spa:
                 spa1,spa2 = spa.split('/')
                 l = [eng,spa1,spa2] 
