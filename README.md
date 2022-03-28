@@ -1,2 +1,2 @@
-# pardon-my-spanish
- Learnin Spanish web app
+# Pardon my Spanish
+A simple web app to learn Spanish
