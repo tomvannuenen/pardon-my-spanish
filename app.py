@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from random import choice
+import string
 
 app = Flask(__name__)
 
@@ -11,37 +12,39 @@ with open('spanishdict.txt', 'r') as f:
             spa,eng = line.split('-')
             if '/' in spa:
                 spa1,spa2 = spa.split('/')
+                spa1 = spa1.translate(str.maketrans('', '', string.punctuation)).lower().strip()
+                spa2 = spa2.translate(str.maketrans('', '', string.punctuation)).lower().strip()
                 l = [eng,spa1,spa2] 
             else:
-                spa1, spa2 = spa, 'n/a'
-                l = [eng,spa1,spa2] 
+                spa = spa.translate(str.maketrans('', '', string.punctuation)).lower().strip()
+                l = [eng,spa] 
             spanish_list.append(l)       
         except:
             continue
 
 loaded_q = []
-answers = []
 with open('user_score.txt', 'w') as f:
     f.write(str(0))
 
 @app.route('/', methods=['GET', 'POST'])
 def basic():
+    t = ""
+    good = False
     with open('user_score.txt', 'r') as f:
         score = int(f.read())
     response = ""
     loaded_q.append(choice(spanish_list))
     eng = loaded_q[len(loaded_q)-1][0]
-    spa_a = [a.lower().strip(" ") for a in loaded_q[len(loaded_q)-2][1:]]
-    if "n/a" in spa_a:
-        spa_a = loaded_q[len(loaded_q)-2][1].lower()
-    else:
-        spa_a_1 = loaded_q[len(loaded_q)-2][1].lower()
-        spa_a_2 = loaded_q[len(loaded_q)-2][2].lower()
     q = f"Translate: {eng}"    
+
     if request.method == 'POST':
         if request.form['text']:
-            answers.append(request.form['text'])
-            if request.form['text'].lower() in spa_a:
+            t = request.form['text'].lower().translate(str.maketrans('', '', string.punctuation)).strip()
+            # first check how many answers we have; if 2, check if answer is there
+            for i in loaded_q[len(loaded_q)-2][1:]:
+                if t == i:
+                    good = True
+            if good:
                 response = "Good!"
                 with open('user_score.txt', 'r') as f:
                     score = int(f.read())
@@ -49,11 +52,10 @@ def basic():
                 with open('user_score.txt', 'w') as f:
                     f.write(str(score))
             else:
-                try:
-                    response = f"Sorry, right answer was: {spa_a_1} / {spa_a_2}"
-                except:
-                    response = f"Sorry, right answer was: {spa_a}"
-    return render_template('index.html', q=q, response=response,loaded_q=loaded_q,score=score)
+                response = f"Sorry, try: {loaded_q[len(loaded_q)-2][1]}"
+
+                
+    return render_template('index.html', q=q, response=response,loaded_q=loaded_q,score=score,t=t)
 
 app.run(debug=True)
 
