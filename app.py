@@ -41,6 +41,7 @@ def basic():
         if request.form['text']:
             t = request.form['text'].lower().translate(str.maketrans('', '', string.punctuation)).strip()
             # first check how many answers we have; if 2, check if answer is there
+            # Note becauase Python is zero-indexed we are getting the previous index of our list with -2
             for i in loaded_q[len(loaded_q)-2][1:]:
                 if t == i:
                     good = True
@@ -59,5 +60,6 @@ def basic():
 
 #app.run(debug=True)
 
+# for running locally
 if __name__ == "__main__":
     app.run()

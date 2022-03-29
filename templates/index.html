@@ -9,7 +9,6 @@
                 integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     </head>
 
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
@@ -33,19 +32,17 @@
 
     
 <body>
-<div id="question">
-<h1>Pardon my Spanish</h1>
-<h2>{{ q }}</h2>
-<form action="/" method="POST">
-    
-<input id="user_input" name="text">
-<input id="user_submit" type="submit">
+    <div id="question">
+        <h1>Pardon my Spanish</h1>
+        <h2>{{ q }}</h2>
 
-</form>
+        <form action="/" method="POST">  
+        <input id="user_input" name="text">
+        <input id="user_submit" type="submit">
+        </form>
 
-<p>{{response}}</p>
-<p>Your score: {{score}}</p>
-    
-    
-</div>    
+        <p>{{response}}</p>
+        <p>Your score: {{score}}</p>
+
+    </div>    
 </body>    
