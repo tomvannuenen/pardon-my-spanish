@@ -55,7 +55,7 @@ def basic():
                 response = f"Sorry, try: {loaded_q[len(loaded_q)-2][1]}"
 
                 
-    return render_template('index.html', q=q, response=response,loaded_q=loaded_q,score=score,t=t)
+    return render_template('index.html', q=q, response=response,score=score)
 
 app.run(debug=True)
 
