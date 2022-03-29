@@ -18,7 +18,7 @@ El uno al otro - each other
 
 Si mejor - instead 
 
-Yo pertenezco a Medellín - I belong in M 
+Yo pertenezco a Medellín - I belong in Medellín 
 
 Menos mal - it’s a good thing 
 
@@ -38,9 +38,9 @@ De todos modos - anyway
 
 No seas tonta/no seas tonto - Don’t be crazy
 
-Para ser honesto - to be honest 
+Para ser honesto / para ser franco - to be honest 
 
-Hace un rato: A while ago
+Hace un rato - A while ago
 
 Ósea - That is
 
@@ -62,7 +62,7 @@ Por cierto - by the way
 
 Mi meta - my goal 
 
-Te lo juro: I swear to you
+Te lo juro - I swear to you
 
 Bien hecho - well done
 
@@ -114,7 +114,7 @@ Cómo te fue - How did it go
 
 Que me queda mejor - what looks better on me 
 
-Fue uno de los momentos más lindos de mi vida - it was one of the nicest days in my life 
+Fue uno de los dias más lindos de mi vida - it was one of the nicest days in my life 
 
 Se ve mucho mejor - it looks much better
 
@@ -136,7 +136,7 @@ Yo quiero enterarme de todo - I want to find out about everything
 
 Cerca - close
 
-alejada - far
+Lejos/Alejada - far
 
 Estamos esperando para variar - still the same (sarcastic)
 
@@ -150,7 +150,7 @@ El tiempo vuela - time flies
 
 Tapabocas - face mask 
 
-Hacer un cambio - make a change  
+Hacer un cambio - To make a change  
 
 Viajar te ensancha las miras - traveling widens your sights 
 
@@ -188,7 +188,7 @@ Te extrañare - I’ll miss you
 
 Echo de menos hablar español - I miss speaking Spanish 
 
-Son las 10 - it’s ten 
+Son las diez - it’s ten o'clock
 
 He estado durmiendo - I’ve been sleeping 
 
@@ -216,9 +216,9 @@ Eso con que viene - This comes with what
 
 Te puedo dejar la propina con la targeta - can I tip with card
 
-Me encontrado con X - bump into X
+Me encontré con ella - I bumped into her
 
-La fecha de caducidad - expiry date  
+La fecha de caducidad - The expiry date  
 
 Hemos discutido por ti - we discussed you
 
@@ -258,7 +258,7 @@ La voy a cuidar muy bien - I’m going to look after it very well
 
 Por un par de días - for a couple of days 
 
-Tengo pendiente (ir al parque) - It’s on my list (to go to the park)
+Tengo pendiente ir al parque - It’s on my list to go to the park
 
 Quinto te debó - how much do I owe you
 
@@ -270,7 +270,7 @@ Que tal si vamos al bosque - how about we go to the forest
 
 Tienes datáfono - Do you have a card machine
 
-Caí en cuenta después que llegamos - i realized after we arrived
+Caí en cuenta después que llegamos - I realized after we arrived
 
 Te va a doler la espalda - your back is going to hurt
 
@@ -290,7 +290,7 @@ Que es lo que más te ha costado? - What was most difficult
 
 He podido - I’ve been able to
 
-Te apetece/tienes ganas: Do you feel like
+Te apetece de ir/tienes ganas de ir - Do you feel like going
 
 Voy saliendo apenas - I’m just heading out 
 
@@ -316,9 +316,9 @@ Me pillaste desprevenido - You caught me unaware
 
 Lleva mucho tiempo - It takes a long time
 
-Se ve rica - That looks great
+Se ve rica /se ve rico - That looks great
 
-He teñido días mejores - I’ve had better days
+He tenido días mejores - I’ve had better days
 
 No te pongas celosa - Don’t be jealous
 
@@ -336,11 +336,11 @@ Podrías repetirlo más despacio - Can you say that slower
 
 Me pongo muy contenta - I feel very satisfied
 
-No entendí la primera/última parte - I didn’t get that part
+No entendí la última parte - I didn’t get the last part
 
 Tengo puestas mi camisa favorita - I’m wearing my favorite shirt
 
-Que pena - I’m sorry
+Qué pena/lo siento - I’m sorry
 
 Esto no es lo que he pedido - That’s not what I ordered
 
@@ -358,7 +358,7 @@ Me disfruté - I enjoyed myself
 
 Me canso de la gente en el metro que no se mira a los ojos
 
-Si tuvieras la posibilidad de vivir donde quisieras, donde te gustaría vivir?
+Si tuvieras la posibilidad de vivir donde quisieras, donde te gustaría vivir - If you had the possibility to live where you wanted, where would you like to live
 
 Dejarme pensar un poco - Let me think a bit
 
@@ -383,4 +383,3 @@ Cuanto te debo - How much do I owe you
 Parece que están dando una fiesta - It seems like they’re giving a party
 
 Te habria gustado - you would've liked it
-
